@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngọc yêu Minh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/love letter 2.css" />
+    <style>
+      html,
+      body {
+        overflow: hidden;
+        height: 100%;
+        background-image: url("./Image/Background\ cloud\ love.jpg");
+        background-size: cover;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter"></div>
+      </div>
+    </div>
+
+    <div class="reset">
+      <button id="open">Open</button>
+    </div>
+
+    <div class="letter-content">
+      <img
+        src="./Image/background_letter.png"
+        alt="Letter Background"
+        class="letter-background"
+      />
+      <div class="letter-text"></div>
+    </div>
+    <div class="speech-bubble">
+      <div>Anh có thứ dành tặng em nè. ❤️</div>
+      <button
+        class="continues-btn"
+        onclick="window.location.href='Other page content/FlowerForYou.html'"
+      >
+        Bấm vô đây nè
+      </button>
+    </div>
+    <img
+      src="./Image/me.png"
+      id="me"
+      style="position: absolute; right: 0; bottom: 0; width: 25%; display: none"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/love letter 2.js"></script>
+  </body>
+</html>

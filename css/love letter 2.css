@@ -1,0 +1,182 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background-image: url("./Image/Background cloud love.jpg");
+  background-size: cover;
+  font-family: "Dancing Script", cursive;
+}
+/* ==== PHẦN ENVELOPE ==== */
+.envlope-wrapper {
+  height: 380px;
+  width: 100%;
+  position: relative;
+}
+#envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  background-color: #d9534f; /* Warm romantic red */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 82px solid transparent;
+  border-top: 98px solid #d9534f; /* Same romantic red */
+  transform-origin: top;
+  pointer-events: none;
+}
+.pocket {
+  border-left: 140px solid #f5a3a2; /* Soft pinkish red */
+  border-right: 140px solid #f5a3a2;
+  border-bottom: 90px solid #ff6f61; /* Lighter romantic red */
+  border-top: 90px solid transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+/* Khi nhấn mở, flap lật lên */
+.open .flap {
+  transform: rotateX(180deg);
+  transition: transform 0.4s ease, z-index 0.6s;
+  z-index: 1;
+}
+
+.letter {
+  position: relative;
+  background-color: #fff;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  top: 5%;
+  border-radius: 6px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+  font-family: "Dancing Script", cursive;
+}
+
+.letter:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.open .letter {
+  transform: translateY(-100px);
+  transition: transform 0.6s 0.6s ease, z-index 0.6s;
+  z-index: 2;
+}
+/* ==== NÚT MỞ THƯ ==== */
+.reset {
+  text-align: center;
+}
+.reset button {
+  font-weight: 800;
+  background-color: transparent;
+  border: solid 2px #d9534f;
+  border-radius: 4px;
+  color: #d9534f;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.reset button:hover {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.letter-content {
+  width: 600px;
+  margin: 20px auto;
+  display: none; /* Ban đầu ẩn */
+  position: relative;
+}
+
+.letter-background {
+  width: 80%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.letter-text {
+  max-width: 360px;
+  position: absolute;
+  top: -245px; /* Đảm bảo nằm trong vùng hiển thị */
+  left: 130px;
+  right: 40px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333; /* Đổi màu nếu cần */
+  opacity: 1; /* Đảm bảo chữ hiển thị */
+  white-space: pre-wrap; /* Giữ đúng khoảng cách dòng */
+  font-weight: bold; /* Cho dễ nhìn */
+  z-index: 10; /* Đảm bảo không bị che */
+}
+
+.continues-btn {
+  right: -120px;
+  bottom: 0px;
+  padding: 8px 16px;
+  background-color: #d9534f; /* Màu đỏ giống phong bì */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.continues-btn:hover {
+  background-color: #c9302c; /* Màu đỏ đậm hơn khi hover */
+}
+
+.speech-bubble {
+  position: absolute;
+  right: 160px; /* Điều chỉnh để căn theo ảnh nhân vật */
+  bottom: 370px; /* Điều chỉnh độ cao */
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  max-width: 250px;
+  font-size: 16px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: black;
+  position: absolute;
+  display: none;
+}
+
+/* Tạo đuôi của khung hội thoại */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -49px;
+  right: 11px;
+  border-width: 24px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}

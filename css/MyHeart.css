@@ -1,0 +1,35 @@
+canvas {
+  background-color: #312;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 102vh;
+}
+
+#startContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #312;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 102vh;
+}
+
+#startBtn {
+  font-size: 24px;
+  padding: 15px 30px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#startBtn:hover {
+  background: #ff1e45;
+}
